@@ -1,0 +1,75 @@
+/* ------------------------------------------------------ */
+/*                      Boxed Layout                      */
+/* ------------------------------------------------------ */
+
+$container-max-width: 100%;
+$container-width: 1005px; // + 30px
+
+$xxs-min: 576px;
+$xs-min: 768px;
+$sm-min: 992px;
+$md-min: 1200px;
+$lg-min: 1600px;
+
+$xxs-max: ($xxs-min - 1); // Small Mobile
+$xs-max: ($xs-min - 1); // Mobile
+$sm-max: ($sm-min - 1); // Tablet
+$md-max: ($md-min - 1); // Desktop
+$lg-max: ($lg-min - 1); // Large Desktop
+
+/* ------------------------------------------------------ */
+/*                          Fonts                         */
+/* ------------------------------------------------------ */
+$font-pn: "pn", sans-serif;
+$font-pn-bold: "pn-bold", sans-serif;
+$font-pn-extraBold: "pn-extraBold", sans-serif;
+
+/* ------------------------------------------------------ */
+/*                        Variable                        */
+/* ------------------------------------------------------ */
+$color-white: #fff;
+$color-black: #000;
+$color-primary: #bea67c;
+
+$tcl-body: #464646;
+$tcl-primary: #bea67c;
+$tcl-white: #fff;
+
+$t: 0.4s;
+$cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
+
+/* ------------------------------------------------------ */
+/*                     Variable Global                    */
+/* ------------------------------------------------------ */
+:root {
+    --h1-fs: 8.4rem;
+    --h2-fs: 4rem;
+    --h3-fs: 1.8rem;
+
+    --body14-fs: 1.4rem;
+    --body15-fs: 1.5rem;
+    --body16-fs: 1.6rem;
+    --body42-fs: 4.2rem;
+
+    --body16-lh: 2.2rem;
+
+    // // Genaral Variable
+    --gap: 30px;
+
+    --height-header: 80px;
+    --height-button: 50px;
+    // --height-footer: 56px;
+    // // --ptop: 150px;
+    // --pd-section: 90px;
+
+    @media (max-width: $sm-max) {
+        // Tablet
+        --height-header: 60px;
+    }
+    @media (max-width: $xs-max) {
+        // // Mobile
+        --height-header: 60px;
+
+        --gap: 20px;
+    }
+}

@@ -1,0 +1,132 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include size(100%, var(--height-header));
+    background-color: $color-black;
+    .container-fluid {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    .menu {
+        position: absolute;
+        left: 50%;
+        display: flex;
+        align-items: center;
+        @include transform(translateX(-50%));
+        li {
+            margin: 0 30px;
+            a {
+                position: relative;
+                @include text(
+                    var(--body15-fs),
+                    $font-pn-bold,
+                    null,
+                    $tcl-white,
+                    uppercase
+                );
+                letter-spacing: 0.375px;
+                padding-bottom: 5px;
+                @include transition(all $t $cubic);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    @include size(0, 2px);
+                    background-color: $color-primary;
+                    left: auto;
+                    right: 0;
+                    bottom: 0;
+                    @include transition(all $t $cubic);
+                }
+
+                &:hover,
+                &.active {
+                    color: $color-primary;
+                    @include transition(all $t $cubic);
+                    &::before {
+                        width: 100%;
+                        left: 0;
+                        right: auto;
+                        @include transition(all $t $cubic);
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        .lang {
+            position: relative;
+            padding: 10px 0 10px;
+            &__current,
+            &__list li {
+                @include text(
+                    var(--body15-fs),
+                    $font-pn-bold,
+                    null,
+                    $tcl-white,
+                    uppercase
+                );
+            }
+
+            &__current {
+                position: relative;
+                @include transition(all $t $cubic);
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                &::after {
+                    content: "";
+                    border-top: 4px solid $color-white;
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    margin-left: 6px;
+                    @include transition(all $t);
+                }
+                &:hover {
+                    color: $color-primary;
+                    @include transition(all $t);
+                    &::after {
+                        border-top-color: $color-primary;
+                        @include transition(all $t);
+                    }
+                }
+            }
+
+            &__list {
+                position: absolute;
+                top: 160%;
+                right: 0;
+                background-color: $color-black;
+                @include transition(all $t);
+                @include visible(0);
+                li {
+                    display: block;
+                    padding: 10px 30px;
+                    cursor: pointer;
+                    text-align: center;
+                }
+            }
+            &.open-lang {
+                .lang {
+                    &__current {
+                        color: $color-primary;
+                        @include transition(all $t);
+                        &::after {
+                            border-top-color: $color-primary;
+                            @include transition(all $t);
+                        }
+                    }
+                    &__list {
+                        top: 100%;
+                        @include transition(all $t);
+                        @include visible(1);
+                    }
+                }
+            }
+        }
+    }
+}
