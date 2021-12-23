@@ -3,7 +3,8 @@
     top: 0;
     left: 0;
     @include size(100%, var(--height-header));
-    background-color: $color-black;
+    background-color: transparent;
+    z-index: 600;
     .container-fluid {
         position: relative;
         display: flex;

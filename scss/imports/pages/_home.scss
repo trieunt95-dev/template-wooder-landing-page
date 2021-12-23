@@ -1,0 +1,112 @@
+/* ------------------------------------------------------ */
+/*                         Slider                         */
+/* ------------------------------------------------------ */
+.slider {
+    position: relative;
+    &__list {
+        @include size(100%, 100vh);
+        &-item {
+            position: relative;
+            @include size(100%);
+            .content {
+                @include mid(false);
+                &__heading {
+                    @include text(
+                        var(--h1-fs),
+                        $font-pn-bold,
+                        1,
+                        $tcl-primary,
+                        uppercase
+                    );
+                    letter-spacing: 16.8px;
+                    margin-bottom: 36px;
+                }
+            }
+            .img {
+                @include size(100%);
+            }
+        }
+    }
+    &__bottom {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: var(--gap);
+        .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 100%;
+        }
+
+        .paging {
+            display: flex;
+            align-items: center;
+            span {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                @include text(
+                    var(--body42-fs),
+                    $font-pn-bold,
+                    null,
+                    $tcl-primary,
+                    null
+                );
+                &::before {
+                    content: "";
+                    display: block;
+                    @include size(42px, 3px);
+                    background-color: $color-primary;
+                    margin-right: 15px;
+                }
+            }
+            ol {
+                display: flex;
+                align-items: center;
+                margin-left: 6px;
+                li {
+                    @include size(12px);
+                    background-color: $color-primary;
+                    opacity: 0.4;
+                    cursor: pointer;
+                    @include br(50%);
+                    margin-left: 10px;
+                    &.is-selected {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .scroll {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: 50%;
+            @include transform(translateX(-50%));
+            img {
+                margin: auto;
+                &:first-child {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
+        .control {
+            &__btn {
+                padding: 12px 20px;
+                border: 1px solid $color-white;
+                &.--prev {
+                    img {
+                        @include transform(rotate(180deg));
+                    }
+                }
+                &.--next {
+                    margin-left: -1px;
+                }
+            }
+        }
+    }
+}

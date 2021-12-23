@@ -36,3 +36,36 @@ a {
 .--hidden {
     display: none;
 }
+
+.btn {
+    position: relative;
+    height: var(--height-button);
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    span {
+        @include text(
+            var(--body14-fs),
+            $font-pn-bold,
+            null,
+            $tcl-black,
+            uppercase
+        );
+        letter-spacing: 2.8px;
+    }
+    img {
+        margin-left: 15px;
+    }
+    &__outline {
+        border: 1px solid $color-white;
+        padding: 0 40px;
+        &.--center {
+            margin: 0 auto;
+        }
+        span {
+            color: $color-white;
+        }
+    }
+}

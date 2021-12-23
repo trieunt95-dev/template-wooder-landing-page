@@ -1,47 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wooder | Template Landing Page</title>
+        <link rel="stylesheet" href="dest/style.min.css" />
+        <link rel="stylesheet" href="dest/fonts.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wooder | Template Landing Page</title>
-    <link rel="stylesheet" href="dest/style.min.css">
-    <link rel="stylesheet" href="dest/fonts.css">
-</head>
-
-<body>
-    <!-- --------------------------------------------------- -->
-    <!--                       Header                        -->
-    <!-- --------------------------------------------------- -->
-    <header class="header">
-        <div class="container-fluid">
-            <a href="#" class="logo">
-                <h1 class="logo__text --hidden">Wooder</h1>
-                <img srcset="images/logo@2x.png 2x" alt="Logo Wooder" class="logo__img">
-            </a>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">News</a></li>
-            </ul>
-            <div class="right">
-                <div class="lang">
-                    <span class="lang__current">EN</span>
-                    <ul class="lang__list">
-                        <li>VI</li>
-                        <li>JP</li>
-                        <li>EU</li>
-                    </ul>
-                </div>
-                <div class="hamburger">
-                    <span></span>
+    <body>
+        <!-- --------------------------------------------------- -->
+        <!--                       Header                        -->
+        <!-- --------------------------------------------------- -->
+        <header class="header">
+            <div class="container-fluid">
+                <a href="#" class="logo">
+                    <h1 class="logo__text --hidden">Wooder</h1>
+                    <img
+                        srcset="images/logo@2x.png 2x"
+                        alt="Logo Wooder"
+                        class="logo__img"
+                    />
+                </a>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+                <div class="right">
+                    <div class="lang">
+                        <span class="lang__current">EN</span>
+                        <ul class="lang__list">
+                            <li>VI</li>
+                            <li>JP</li>
+                            <li>EU</li>
+                        </ul>
+                    </div>
+                    <div class="hamburger">
+                        <span></span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-</body>
+        </header>
 
+        <!-- --------------------------------------------------- -->
+        <!--                        Main                         -->
+        <!-- --------------------------------------------------- -->
+        <main class="main">
+            <!-- --------------------------------------------------- -->
+            <!--                       Slider                        -->
+            <!-- --------------------------------------------------- -->
+            <section class="slider">
+                <div class="slider__list">
+                    <div class="slider__list-item">
+                        <div class="content">
+                            <h2 class="content__heading">Wooder</h2>
+                            <a
+                                href="#"
+                                class="content__btn btn btn__outline --center"
+                                ><span>Learn more</span
+                                ><img
+                                    srcset="images/icon-arrow-btn@2x.png 2x"
+                                    alt="icon arrow"
+                            /></a>
+                        </div>
+                        <img
+                            srcset="images/slide-1@2x.jpg 2x"
+                            alt="slider 1"
+                            class="img"
+                        />
+                    </div>
+                </div>
+                <div class="slider__bottom">
+                    <div class="container-fluid">
+                        <div class="paging">
+                            <span>01</span>
+                            <ol>
+                                <li class="is-selected"></li>
+                                <li></li>
+                                <li></li>
+                            </ol>
+                        </div>
+                        <div class="scroll">
+                            <img
+                                srcset="images/icon-mouse@2x.png 2x"
+                                alt="icon mouse"
+                            />
+                            <img
+                                srcset="images/icon-arrow-down@2x.png 2x"
+                                alt="icon arrow down"
+                            />
+                        </div>
+                        <div class="control">
+                            <a href="#" class="control__btn --prev">
+                                <img
+                                    srcset="images/icon-arrow-btn@2x.png 2x"
+                                    alt="icon prev"
+                                />
+                            </a>
+                            <a href="#" class="control__btn --next">
+                                <img
+                                    srcset="images/icon-arrow-btn@2x.png 2x"
+                                    alt="icon next"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
